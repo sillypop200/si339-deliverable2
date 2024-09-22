@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{athlete_name} - Athlete Profile</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header with athlete's name and school -->
+    <header>
+        <h1>{athlete_name}</h1>
+        <h2>{athlete_school} - {athlete_grade} Grade</h2>
+    </header>
+
+    <!-- Athlete's personal information section -->
+    <section id="personal-info">
+        <h2>Athlete Information</h2>
+        <p>Name: {athlete_name}</p>
+        <p>School: {athlete_school}</p>
+        <p>strong>Grade: {athlete_grade}</p>
+        <p>Age: {athlete_age}</p>
+        <p>Gender: {athlete_gender}</p>
+        <p>Team Colors: {athlete_team_colors}</p>
+    </section>
+
+    <!-- Athlete's profile picture -->
+    <section id="athlete-photo">
+        <img src="{source for photo}" alt="{athlete_name} Running" class="athlete-photo">
+    </section>
+
+    <!-- infromation about two most basic events -->
+    <section id="recent-events">
+        <h2>Recent Events</h2>
+
+        <!-- First recent event -->
+        <div class="event-details">
+            <h3>{event_name_1}</h3>
+            <p>Date: {event_date_1}</p>
+            <p>Location: {event_location_1}</p>
+            <p>Time: {event_time_1}</p>
+            <p>Place: {event_place_1}</p>
+            <p>Coach's Comments: "{event_coach_comments_1}"</p>
+        </div>
+
+        <!-- Second recent event -->
+        <div class="event-details">
+            <h3>{event_name_2}</h3>
+            <p>Date: {event_date_2}</p>
+            <p>Location: {event_location_2}</p>
+            <p>Time: {event_time_2}</p>
+            <p> Place: {event_place_2}</p>
+            <p>Coach's Comments: "{event_coach_comments_2}"</p>
+        </div>
+    </section>
+
+
+    <!-- Social media links section -->
+    <section id="social-media">
+        <h2>Social Media of {athlete_name}</h2>
+        <ul>
+            <li><a href="{twitter_link}" target="_blank">Twitter</a></li>
+            <li><a href="{instagram_link}" target="_blank">Instagram</a></li>
+            <li><a href="{facebook_link}" target="_blank">Facebook</a></li>
+        </ul>
+    </section>
+
+    <!-- Section for school logo (optional) -->
+    <section id="school-logo">
+        <img src="{school_logo_src}" alt="{athlete_school} logo" class="school-logo">
+    </section>
+</body>
+</html>
