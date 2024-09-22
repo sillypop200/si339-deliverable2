@@ -1,74 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset = "UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{athlete_name} - Athlete Profile</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <title> {meet_name} </title>
+    <style>
+        img{
+            max-width: 24%;
+            border: solid navy 5px;
+        }
+        .photo{
+            display: inline;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header with athlete's name and school -->
-    <header>
-        <h1>{athlete_name}</h1>
-        <h2>{athlete_school} - {athlete_grade} Grade</h2>
+    <header> 
+        <nav>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#meetSummary">Meet Summary</a></li>
+            <li><a href="#meetPhotoBook">Meet Photo Book</a></li>
+            <li><a href="#meetIndividualResults">Meet Individual Results</a></li>
+        </nav>
+        <h1>{meet_name}</h1>
+        <h3>{meet_date}</h3>
     </header>
+        <!-- Section for Meet Summary -->
+        <section id = "meetSummary"> 
+            <h1> Meet Summary </h1>
+            <p> {meet_description}</p>
+        </section>
 
-    <!-- Athlete's personal information section -->
-    <section id="personal-info">
-        <h2>Athlete Information</h2>
-        <p>Name: {athlete_name}</p>
-        <p>School: {athlete_school}</p>
-        <p>strong>Grade: {athlete_grade}</p>
-        <p>Age: {athlete_age}</p>
-        <p>Gender: {athlete_gender}</p>
-        <p>Team Colors: {athlete_team_colors}</p>
-    </section>
+        <!-- Section for Meet Photos -->
+        <section id = "meetPhotoBook"> 
+            <h1> Meet Photo Book </h1>
+            <div id = "photoBook">
+                <div class = "photo">
+                    <img src = "earlybird/IMG_9043.jpg" alt= "Meet Photo 1">
+                </div>
+                <div class = "photo">
+                    <img src = "earlybird/IMG_9049.jpg" alt= "Meet Photo 2">
+                </div>
+                <div class = "photo">
+                    <img src = "earlybird/IMG_9051.jpg" alt= "Meet Photo 3">
+                </div>
+                <div class = "photo">
+                    <img src = "earlybird/IMG_9037.jpg" alt= "Meet Photo 3">
+                </div>
+            </div>
+        </section>
 
-    <!-- Athlete's profile picture -->
-    <section id="athlete-photo">
-        <img src="{source for photo}" alt="{athlete_name} Running" class="athlete-photo">
-    </section>
+        <!-- Section for Team Results -->
+        <section id = "meetTeamResults"> 
+            <h1> Meet Team Results </h1>
+            <table id = "meet-team-results">
+                <thead>
+                    <th>Place</th>
+                    <th>Team Name</th>
+                    <th>Score</th>
+                </thead>
+                <tbody>
+                    <tr class = "team-row">
+                        <td class = "team-placing">{team_place}</td>
+                        <td class = "team-name">{team_name}</td>
+                        <td class = "team-score">{team_score}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-    <!-- infromation about two most basic events -->
-    <section id="recent-events">
-        <h2>Recent Events</h2>
-
-        <!-- First recent event -->
-        <div class="event-details">
-            <h3>{event_name_1}</h3>
-            <p>Date: {event_date_1}</p>
-            <p>Location: {event_location_1}</p>
-            <p>Time: {event_time_1}</p>
-            <p>Place: {event_place_1}</p>
-            <p>Coach's Comments: "{event_coach_comments_1}"</p>
-        </div>
-
-        <!-- Second recent event -->
-        <div class="event-details">
-            <h3>{event_name_2}</h3>
-            <p>Date: {event_date_2}</p>
-            <p>Location: {event_location_2}</p>
-            <p>Time: {event_time_2}</p>
-            <p> Place: {event_place_2}</p>
-            <p>Coach's Comments: "{event_coach_comments_2}"</p>
-        </div>
-    </section>
-
-
-    <!-- Social media links section -->
-    <section id="social-media">
-        <h2>Social Media of {athlete_name}</h2>
-        <ul>
-            <li><a href="{twitter_link}" target="_blank">Twitter</a></li>
-            <li><a href="{instagram_link}" target="_blank">Instagram</a></li>
-            <li><a href="{facebook_link}" target="_blank">Facebook</a></li>
-        </ul>
-    </section>
-
-    <!-- Section for school logo (optional) -->
-    <section id="school-logo">
-        <img src="{school_logo_src}" alt="{athlete_school} logo" class="school-logo">
-    </section>
+        <!-- Section for Individual Results -->
+        <section id = "meetIndividualResults"> 
+            <h1> Meet Individual Results </h1>
+            <table id = "meet-individal-results">
+                <thead>
+                    <th>Place</th>
+                    <th>Name</th>
+                    <th>Time</th>
+                    <th>Grade</th>
+                    <th>Team</th>
+                    <th>Athletic.Net Link</th>
+                </thead>
+                <tbody>
+                    <tr class = "athlete-row">
+                        <td class = "athlete-placing">{athlete_place}</td>
+                        <td class = "athlete-name">{athlete_name}</td>
+                        <td class = "athlete-time">{athlete_time}</td>
+                        <td class = "athlete-grade">{athlete-grade}</td>
+                        <td class = "athlete-team">{athlete_team}</td>
+                        <td class= "athlete-link">{athlete_link}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 </body>
-</html>
